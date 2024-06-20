@@ -2,7 +2,7 @@ package api.model.Project;
 
 import java.util.ArrayList;
 
-public class AddProject {
+public class Project {
     public String id;
     public String name;
     public HourlyRate hourlyRate;

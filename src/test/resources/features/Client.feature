@@ -1,4 +1,4 @@
-@clockify
+@clockify @client
 Feature: Client
 
   @getClient
@@ -9,8 +9,6 @@ Feature: Client
     And get workspaceId
     When I perform a '<operation>' to '<entity>' endpoint with the '<jsonName>' and ''
     Then status code <statusCode> is obtained
-    And get clientId
-
 
     Examples:
       | jsonName  | statusCode | operation | entity | x-api-key                                        |

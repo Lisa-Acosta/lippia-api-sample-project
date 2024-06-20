@@ -1,0 +1,11 @@
+{
+  "headers": {
+    "Content-Type": "application/json",
+    "x-api-key": "{{api.key}}"
+  },
+  "body": {
+    "name":"Task_API_TP6"
+  },
+  "endpoint": "/v1/workspaces/{{workspace.id}}/projects/{{project.id}}/tasks",
+  "url": "{{base.url}}"
+}

@@ -1,19 +1,18 @@
 package services;
-import api.model.Project.Project;
-import com.crowdar.api.rest.APIManager;
+import api.model.Task.Task;
 import com.crowdar.api.rest.Response;
 import com.crowdar.core.PropertyManager;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class ProjectService extends BaseService {
+public class TaskService extends BaseService {
     public static Response get(String jsonName) {
-        return get(jsonName, Project[].class, setParams());
+        return get(jsonName, Task[].class, setParams());
     }
 
     public static Response post(String jsonName) {
-        return post(jsonName, Project.class, setParams());
+        return post(jsonName, Task.class, setParams());
     }
 
 
@@ -22,13 +21,10 @@ public class ProjectService extends BaseService {
         params.put("api.key", X_API_KEY.get());
         params.put("base.url", PropertyManager.getProperty("base.api.url"));
         params.put("workspace.id", WORKSPACE_ID.get());
+        params.put("project.id", PROJECT_ID.get());
         return params;
     }
-    public static String getProjectId(){
-        Project[] lastResponse = (Project[]) APIManager.getLastResponse().getResponse();
-        System.out.println("id_Project ="+lastResponse[0].id);
-        return lastResponse[0].id;
-    }
+
 }
 
 

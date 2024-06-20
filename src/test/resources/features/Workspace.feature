@@ -1,4 +1,4 @@
-@clockify
+@clockify @workspace
 Feature: Workspace
 
   @getWorkspaces
@@ -7,7 +7,6 @@ Feature: Workspace
     When I perform a '<operation>' to '<entity>' endpoint with the '<jsonName>' and ''
     Then status code <statusCode> is obtained
     And get workspaceId
-
 
     Examples:
       | jsonName     | statusCode | operation | entity    | x-api-key                                        |
@@ -20,9 +19,8 @@ Feature: Workspace
     Then status code <statusCode> is obtained
     And get message <message>
 
-
     Examples:
-      | jsonName     | statusCode | operation | entity    | x-api-key                                       | message           |
-      | getWorkspace | 401        | GET       | WORKSPACE | MmY4ZmVjOGItMDEwMS00YjEzLWJiMTUtYWUxZGJiZWExMmJ | incorrect api-key |
+      | jsonName              | statusCode | operation | entity    | x-api-key                                        | message           |
+      | getWorkspaceIncorrect | 404        | GET       | WORKSPACE | MmY4ZmVjOGItMDEwMS00YjEzLWJiMTUtYWUxZGJiZWExMmJm | incorrect-request |
 
 
