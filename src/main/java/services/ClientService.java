@@ -1,5 +1,5 @@
 package services;
-import api.model.Client;
+import api.model.Client.Client;
 import com.crowdar.api.rest.APIManager;
 import com.crowdar.api.rest.Response;
 import com.crowdar.core.PropertyManager;

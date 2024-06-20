@@ -7,12 +7,6 @@ import services.WorkspaceService;
 
 
 public class WorkspaceSteps extends PageSteps {
-
-    @Given("^the user of clockify has an api-key (.*)$")
-    public void theUserOfClockifyHasAnApiKey(String key) {
-        BaseService.X_API_KEY.set(key);
-    }
-
     @And("get workspaceId")
     public void getWorkspaceId() {
         BaseService.WORKSPACE_ID.set(WorkspaceService.getWorkspaceId());

@@ -1,4 +1,4 @@
-package api.model;
+package api.model.Project;
 
 public class Membership{
     public String userId;

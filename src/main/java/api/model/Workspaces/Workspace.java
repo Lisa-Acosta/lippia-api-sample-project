@@ -1,4 +1,4 @@
-package api.model;
+package api.model.Workspaces;
 
 import java.util.ArrayList;
 

@@ -1,0 +1,69 @@
+[{
+  "id": "6670c30a67beea5baa4c2d03",
+  "name": "{{name}}",
+  "hourlyRate": {
+    "amount": 0,
+    "currency": "USD"
+  },
+  "costRate": {
+    "amount": 0,
+    "currency": "USD"
+  },
+  "memberships": [
+    {
+      "userId": "6618388fa93c603f6c2eff4a",
+      "hourlyRate": null,
+      "costRate": null,
+      "targetId": "6670c30a67beea5baa4c2d03",
+      "membershipType": "WORKSPACE",
+      "membershipStatus": "ACTIVE"
+    }
+  ],
+  "workspaceSettings": {
+    "timeRoundingInReports": false,
+    "onlyAdminsSeeBillableRates": true,
+    "onlyAdminsCreateProject": true,
+    "onlyAdminsSeeDashboard": false,
+    "defaultBillableProjects": true,
+    "lockTimeEntries": null,
+    "lockTimeZone": null,
+    "round": {
+      "round": "Round to nearest",
+      "minutes": "15"
+    },
+    "projectFavorites": true,
+    "canSeeTimeSheet": false,
+    "canSeeTracker": true,
+    "projectPickerSpecialFilter": false,
+    "forceProjects": false,
+    "forceTasks": false,
+    "forceTags": false,
+    "forceDescription": false,
+    "onlyAdminsSeeAllTimeEntries": false,
+    "onlyAdminsSeePublicProjectsEntries": false,
+    "trackTimeDownToSecond": true,
+    "projectGroupingLabel": "client",
+    "adminOnlyPages": [],
+    "automaticLock": null,
+    "onlyAdminsCreateTag": false,
+    "onlyAdminsCreateTask": false,
+    "timeTrackingMode": "DEFAULT",
+    "multiFactorEnabled": false,
+    "numberFormat": "PERIOD_COMMA",
+    "currencyFormat": "VALUE_SPACE_CURRENCY",
+    "decimalFormat": false,
+    "isProjectPublicByDefault": true
+  },
+  "imageUrl": "",
+  "featureSubscriptionType": "FREE",
+  "features": [
+    "TIME_TRACKING",
+    "KIOSK"
+  ],
+  "currencies": [],
+  "subdomain": {
+    "name": null,
+    "enabled": false
+  }
+}]
+

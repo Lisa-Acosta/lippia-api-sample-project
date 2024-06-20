@@ -1,6 +1,6 @@
-package api.model;
+package api.model.Project;
 
-public class CostRate{
+public class HourlyRate{
     public int amount;
     public String currency;
 }

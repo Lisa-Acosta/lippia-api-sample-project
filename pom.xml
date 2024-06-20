@@ -14,13 +14,24 @@
     <name>api-rest-automation</name>
     <packaging>jar</packaging>
     <url>http://maven.apache.org</url>
+    <developers>
+        <developer>
+            <id>LA</id>
+            <name>Lisa Acosta</name>
+            <email>lisa.acosta@gmail.com</email>
+            <url>https://github.com/Lisa-Acosta</url>
+        </developer>
+    </developers>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <base.api.url>https://reqres.in/api/users</base.api.url>
+        <maven.build.timestamp.format>dd-MM-yyyy-HH-mm-ss</maven.build.timestamp.format>
+        <buildIdentifier>Lisa_Acosta_API_project_${maven.build.timestamp}</buildIdentifier>
+        <base.api.url>https://api.clockify.me/api</base.api.url>
+        <x.api.key>MmY4ZmVjOGItMDEwMS00YjEzLWJiMTUtYWUxZGJiZWExMmJm</x.api.key>
         <cucumber.stepsDefinitions>--glue ar/steps --glue com/crowdar/api/rest</cucumber.stepsDefinitions>
         <cucumber.hooks>--glue com/crowdar/bdd/cukes --glue ar/apiExampleProject/hook</cucumber.hooks>
-        <cucumber.tags>@Success</cucumber.tags>
+        <cucumber.tags>@clockify</cucumber.tags>
         <crowdar.cucumber.plugins>--plugin pretty --plugin api.report.CucumberReporter:</crowdar.cucumber.plugins>
         <crowdar.extent.host.name>LocalMachine</crowdar.extent.host.name>
         <crowdar.extent.environment>Local</crowdar.extent.environment>
@@ -88,6 +99,12 @@
         </dependency>
     </dependencies>
     <build>
+        <testResources>
+            <testResource>
+                <filtering>true</filtering>
+                <directory>src/test/resources</directory>
+            </testResource>
+        </testResources>
         <filters>
             <filter>src/main/resources/cucumber.properties</filter>
         </filters>

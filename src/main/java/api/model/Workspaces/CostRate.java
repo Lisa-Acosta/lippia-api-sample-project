@@ -1,6 +1,6 @@
-package api.model;
+package api.model.Workspaces;
 
-public class HourlyRate{
+public class CostRate{
     public int amount;
     public String currency;
 }

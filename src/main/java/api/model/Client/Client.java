@@ -1,6 +1,4 @@
-package api.model;
-
-import java.util.ArrayList;
+package api.model.Client;
 
 public class Client {
     public String id;

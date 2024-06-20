@@ -6,17 +6,22 @@ import com.crowdar.api.rest.APIManager;
 import com.crowdar.core.PageSteps;
 import io.cucumber.java.en.*;
 import com.google.api.client.repackaged.com.google.common.base.Splitter;
-import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.lippia.api.service.CommonService;
 import org.apache.commons.lang.StringUtils;
 import org.testng.Assert;
+import services.BaseService;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Map;
 
 public class CommonSteps extends PageSteps {
+    @Given("^the user of clockify has an api-key (.*)$")
+    public void theUserOfClockifyHasAnApiKey(String key) {
+        BaseService.X_API_KEY.set(key);
+    }
 
     @When("^I perform a '(.*)' to '(.*)' endpoint with the '(.*)' and '(.*)'$")
     public void doRequest(String methodName, String entity, String jsonName, String jsonReplacementValues) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
@@ -36,5 +41,11 @@ public class CommonSteps extends PageSteps {
             parameters = Splitter.on(",").withKeyValueSeparator(":").split(jsonReplacementValues);
         }
         return parameters;
+    }
+
+
+    @And("get message")
+    public void getMessage() {
+        BaseService.getResponseMessage();
     }
 }
