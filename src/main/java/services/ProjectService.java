@@ -16,7 +16,6 @@ public class ProjectService extends BaseService {
         return post(jsonName, Project.class, setParams());
     }
 
-
     public static Map<String, String > setParams(){
         Map<String, String> params = new HashMap<String, String>();
         params.put("api.key", X_API_KEY.get());

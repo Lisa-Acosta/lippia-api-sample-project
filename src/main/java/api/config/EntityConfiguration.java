@@ -26,6 +26,18 @@ public enum EntityConfiguration {
         public Class<?> getEntityService() {
             return TaskService.class;
         }
+    },
+    USER {
+        @Override
+        public Class<?> getEntityService() {
+            return UserService.class;
+        }
+    },
+    ENTRIES {
+        @Override
+        public Class<?> getEntityService() {
+            return TimeEntryService.class;
+        }
     };
 
 

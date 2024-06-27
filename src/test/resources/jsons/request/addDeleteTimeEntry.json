@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "Content-Type": "application/json",
+    "x-api-key": "{{api.key}}"
+  },
+  "body": {
+    "description": "FINAL PROJECT API2",
+    "projectId": "66738ca44950065c0a8843a9",
+    "start": "2024-06-19T12:00:00Z",
+    "end": "2024-06-19T20:00:00Z",
+    "duration": "PT8H"
+  },
+  "endpoint": "/v1/workspaces/{{workspace.id}}/time-entries/",
+  "url": "{{base.url}}"
+}

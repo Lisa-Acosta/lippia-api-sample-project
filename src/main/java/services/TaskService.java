@@ -14,8 +14,6 @@ public class TaskService extends BaseService {
     public static Response post(String jsonName) {
         return post(jsonName, Task.class, setParams());
     }
-
-
     public static Map<String, String > setParams(){
         Map<String, String> params = new HashMap<String, String>();
         params.put("api.key", X_API_KEY.get());
